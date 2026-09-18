@@ -1,0 +1,24 @@
+name: Proposal
+description: Propose new documentation or a change to the template
+title: "[PROPOSAL] "
+labels: [proposal]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you propose
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it needed
+      description: What does a reader currently get wrong, or fail to find?
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This changes the shared theme, so it affects every documentation site

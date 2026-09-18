@@ -1,0 +1,4 @@
+# Pinned to minor versions: a theme upgrade should be a deliberate commit,
+# not something that happens silently on a Tuesday.
+mkdocs-material~=9.7
+mkdocs-static-i18n[material]~=1.3

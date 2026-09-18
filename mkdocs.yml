@@ -1,0 +1,176 @@
+# =============================================================================
+# NewUU documentation template
+#
+# TO START A NEW DOCUMENTATION REPOSITORY:
+#   1. Use this repository as a GitHub template ("Use this template").
+#   2. Change the five values under CHANGE THESE.
+#   3. Replace the contents of docs/ and rewrite `nav`.
+#   4. Delete docs/guide/ and docs/example/ once you no longer need them —
+#      they are the component reference, not your content.
+#
+# Everything below the CHANGE THESE block is the theme. It should not need
+# editing, and if you find yourself editing it, that is worth a conversation
+# first: the point of this template is that nobody makes design decisions twice.
+# =============================================================================
+
+# --- CHANGE THESE ------------------------------------------------------------
+site_name: NewUU Documentation Template
+site_description: The documentation template of the School of Engineering, New Uzbekistan University
+site_url: https://newuu-engineering.github.io/newuu-docs-template/
+repo_url: https://github.com/NewUU-engineering/newuu-docs-template
+repo_name: NewUU-engineering/newuu-docs-template
+# -----------------------------------------------------------------------------
+
+edit_uri: edit/main/docs/
+copyright: CC BY 4.0 · School of Engineering, New Uzbekistan University
+
+theme:
+  name: material
+  custom_dir: overrides   # footer lockup; see overrides/partials/copyright.html
+  language: en
+  # No `logo:` on purpose. Material always wraps the logo in a home LINK, and
+  # the brand rule should be a mark, not a button. It is drawn instead as a
+  # ::before on the header title (newuu.css §12.11), which is decoration only
+  # and is present at every breakpoint. assets/newuu-mark.svg is kept for
+  # social cards and external use.
+  favicon: assets/favicon.svg
+  font:
+    text: IBM Plex Sans      # full Cyrillic + Latin Extended (Uzbek o', g', ʻ)
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # ONE icon toggles the scheme — not a light/dark pair of buttons
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch theme
+    - media: "(prefers-color-scheme: light)"
+      scheme: newuu
+      toggle:
+        icon: material/brightness-7
+        name: Switch theme
+    - media: "(prefers-color-scheme: dark)"
+      scheme: newuu-dark
+      toggle:
+        icon: material/brightness-4
+        name: Switch theme
+  features:
+    - navigation.sections    # flattens the drawer: no sliding sub-levels
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer      # previous / next at the foot of the page
+    - navigation.indexes
+    - navigation.path        # breadcrumbs
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+    # navigation.instant is deliberately OFF: it breaks the i18n language
+    # switcher, which then sends readers to the home page instead of the
+    # same page in the other language.
+
+extra_css:
+  - stylesheets/newuu.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  # ++ctrl+alt+del++ -> real keyboard keys.
+  #
+  # IMPORTANT: pymdownx.keys only renders names it knows. Keyboard keys are in
+  # its default map; GAMEPAD AND CONTROLLER BUTTONS ARE NOT. Without the map
+  # below, `++l2+b++` is published verbatim as the literal text "++l2+b++" —
+  # and it is normally written on a safety callout, which is the worst place in
+  # the documentation to be wrong. Add every button your equipment actually has.
+  - pymdownx.keys:
+      key_map:
+        l1: "L1"
+        l2: "L2"
+        r1: "R1"
+        r2: "R2"
+        start: "START"
+        select: "SELECT"
+        home: "HOME"
+        dpad-up: "D-pad ↑"
+        dpad-down: "D-pad ↓"
+        dpad-left: "D-pad ←"
+        dpad-right: "D-pad →"
+        stick-left: "Left stick"
+        stick-right: "Right stick"
+  - pymdownx.tabbed:
+      alternate_style: true # content.tabs.link does nothing without this
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: [docs/includes]   # --8<-- "file.md" pulls from here
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Required for :material-*: icons in card grids. Without it the shortcodes
+  # render as literal text.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: ru
+          name: Русский
+          build: true
+        - locale: uz
+          name: O'zbekcha
+          build: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/NewUU-engineering
+
+# docs/includes/ holds snippet fragments pulled in with --8<--. They are not
+# pages, so keep them out of the build and out of the "not in nav" warning.
+exclude_docs: |
+  includes/
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+nav:
+  - Home: index.md
+  - Using this template:
+      - guide/index.md
+      - Components: guide/components.md
+      - Writing style: guide/writing.md
+      - Translations: guide/translations.md
+  - Example section:
+      - example/index.md
+      - Example procedure: example/procedure.md
+      - Example reference: example/reference.md

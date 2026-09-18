@@ -1,0 +1,35 @@
+name: Documentation error
+description: Something in the documentation is wrong, unclear or out of date
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: URL or file path
+      placeholder: docs/example/procedure.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the text as it stands.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Does this affect safety?
+      options:
+        - "No"
+        - "Yes — someone could be hurt by following this page"
+    validations:
+      required: true
