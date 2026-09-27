@@ -164,6 +164,9 @@ validation:
   anchors: warn
 
 nav:
+  - Tasks:
+      - Junior track: tasks/junior.md
+      - Senior track: tasks/senior.md
   - Home: index.md
   - Using this template:
       - guide/index.md
