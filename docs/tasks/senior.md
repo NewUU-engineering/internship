@@ -12,7 +12,7 @@ Train the Unitree Go2 quadruped on the flat-terrain velocity tracking task that 
 
 When training finishes, load your trained policy and watch it run in the Newton visualizer. Record the screen.
 
-**Submit:**
+**Push to your repository:**
 
 - A video of your policy running
 - Your trained checkpoint file
@@ -29,7 +29,7 @@ Open TensorBoard and compare your two runs. Look at error_vel_xy, success_rate, 
 
 Then retrain the wide-range configuration again, this time with roughly three times as many training iterations, and compare a third time.
 
-**Submit:**
+**Push to your repository:**
 
 - A video and checkpoint for the wide-range policy
 - A video and checkpoint for the wide-range policy trained longer
@@ -40,6 +40,10 @@ Then retrain the wide-range configuration again, this time with roughly three ti
 1. Your prediction, written before you ran the experiment.
 2. What actually happened, with the metrics to support it.
 3. Did more training iterations fix it? If yes, what does that tell you about the cause? If no, what does that rule out?
+
+## Submission
+
+Create a public GitHub repository, push everything listed above to it, and send us the link to the repository.
 
 ## Notes
 
