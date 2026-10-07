@@ -6,7 +6,7 @@ Use UltimateBots Studio to generate a motion for the Unitree G1 robot. You can e
 
 Then, using the Unitree G1 model from the Unitree RL Gym repository, write a Python script that loads the robot in MuJoCo, plays the generated motion, and renders the result as an MP4 video.
 
-**Submit:**
+**Push to your repository:**
 
 - The rendered robot motion (motion.mp4)
 - The source video or text prompt used
@@ -23,7 +23,7 @@ Clone the Unitree RL Gym repository and run the pretrained G1 walking policy usi
 
 The default policy makes the robot walk forward. Modify the setup so that the robot instead walks in a circle.
 
-**Submit:**
+**Push to your repository:**
 
 - A video of the G1 walking in a circle
 - A short note explaining what you changed and why it produces circular motion
@@ -32,6 +32,10 @@ The default policy makes the robot walk forward. Modify the setup so that the ro
 
 1. What inputs does the policy receive, and where do they come from?
 2. What does the policy output, and how is that converted into joint torques?
+
+## Submission
+
+Create a public GitHub repository, push everything listed above to it, and send us the link to the repository.
 
 ## Links
 
