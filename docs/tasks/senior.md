@@ -2,7 +2,7 @@
 
 Training a locomotion policy in Isaac Lab, then investigating what a change to the task makes.
 
-If you cannot get Isaac Lab running after a reasonable attempt, email us and explain why it didnt work.
+If you cannot get Isaac Lab running after a reasonable attempt, fill out [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd0eTLY8zXTCS4gyTA9HDae2g5ZOY3dNbb-wedcaOr1DcXXFg/viewform?usp=publish-editor) and explain why it didnt work.
 
 ## Part A — Train a walking policy
 
@@ -43,7 +43,7 @@ Then retrain the wide-range configuration again, this time with roughly three ti
 
 ## Submission
 
-Create a public GitHub repository, push everything listed above to it, and send us the link to the repository.
+Create a public GitHub repository, push everything listed above to it, and submit the link to the repository through [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd0eTLY8zXTCS4gyTA9HDae2g5ZOY3dNbb-wedcaOr1DcXXFg/viewform?usp=publish-editor).
 
 ## Notes
 
