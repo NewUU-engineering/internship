@@ -43,6 +43,8 @@ Then retrain the wide-range configuration again, this time with roughly three ti
 
 ## Submission
 
+**Deadline:** October 20, 2026
+
 Create a public GitHub repository, push everything listed above to it, and submit the link to the repository through [this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd0eTLY8zXTCS4gyTA9HDae2g5ZOY3dNbb-wedcaOr1DcXXFg/viewform?usp=publish-editor).
 
 ## Notes
