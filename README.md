@@ -1,23 +1,18 @@
-# NewUU documentation template
+# NewUU Robotics Internship
 
-The documentation template of the **School of Engineering, New Uzbekistan
-University**. Clone it and the design is already done — colours, typography,
-components and accessibility are decided, implemented and written down.
+Tasks, schedule and deliverables of the robotics internship at the School of Engineering, New Uzbekistan University. The work is done on the Unitree G1 humanoid and the Go2 quadruped: simulation, policy training and supervised tests on real hardware.
 
-Built on [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/),
-published to GitHub Pages, in English, Russian and Uzbek.
+📖 **Read the site:** https://newuu-engineering.github.io/internship/
 
-## Start a new documentation repository
+## What is in here
 
-1. Press **Use this template** → *Create a new repository*, inside the
-   `NewUU-engineering` organisation.
-2. Change the five values under `CHANGE THESE` at the top of `mkdocs.yml`:
-   `site_name`, `site_description`, `site_url`, `repo_url`, `repo_name`.
-3. Replace the contents of `docs/`, and rewrite `nav`.
-4. Delete `docs/guide/` and `docs/example/` — they are the component reference,
-   not your content.
-5. Push to `main`. The workflow publishes the site; enable GitHub Pages once,
-   serving from the `gh-pages` branch.
+| Section | What it covers |
+| --- | --- |
+| [Schedule and deliverables](docs/tasks/interns.md) | Work packages by week, level and the deliverable for each |
+| [Junior track](docs/tasks/junior.md) | Task 1: human motion to the G1 in MuJoCo, and a walking policy that walks in a circle |
+| [Senior track](docs/tasks/senior.md) | Task 2: a Go2 locomotion policy in Isaac Lab, a wider command range and what it changes |
+
+The site is built with Material for MkDocs on the NewUU documentation template, published to GitHub Pages, in English and Russian (pages without a translation fall back to English).
 
 ## Run it locally
 
@@ -25,59 +20,34 @@ published to GitHub Pages, in English, Russian and Uzbek.
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-mkdocs serve          # http://127.0.0.1:8000
+mkdocs serve   # http://127.0.0.1:8000
 ```
 
-Before pushing:
+Before pushing, check that nothing is broken:
 
 ```bash
 mkdocs build --strict   # broken links and missing files become errors
 ```
 
-## What is in here
+## Publishing
+
+A push to `main` runs the **Deploy docs** workflow, which builds the site with `--strict` and publishes it to the `gh-pages` branch.
+
+## Repository layout
 
 | Path | What it is |
-|---|---|
-| `docs/stylesheets/newuu.css` | The theme. Two colour schemes, the component styles, and the reasoning in comments |
-| `docs/assets/` | Logos, the mark, the favicon |
-| `docs/guide/` | How to use the template — **components reference lives here**. Delete after use |
-| `docs/example/` | Example pages showing the components at work, with Russian and Uzbek versions. Delete after use |
+| --- | --- |
+| `docs/` | The pages of the site; `page.ru.md` is the Russian version of `page.md` |
+| `docs/tasks/` | Schedule and the two task tracks |
 | `docs/includes/` | Shared snippets pulled into pages with `--8<--` |
+| `docs/stylesheets/newuu.css` | The NewUU theme |
 | `DESIGN-DECISIONS.md` | Why the theme looks the way it does |
-| `.github/workflows/docs.yml` | Builds with `--strict`, publishes on push to `main` |
-
-## The design, in brief
-
-- **Navy `#162347` is the chrome, green `#147E5C` is the accent.** Green never
-  carries meaning inside content — that is what keeps the danger red free.
-- **Two schemes, designed separately.** The brand green changes value between
-  them (`#147E5C` light, `#41B078` dark); `#147E5C` fails contrast on the dark
-  ground, so it is not simply reused.
-- **A danger red was introduced** (`#B3261E` light, `#FF6B5E` dark) because the
-  NewUU palette ships no error colour, and these sites carry safety content.
-- **Severity never depends on colour alone** — danger, warning and note each
-  carry a distinct shape, so the ladder survives greyscale and colour blindness.
-- **IBM Plex Sans + JetBrains Mono**, because Museo Sans is commercially
-  licensed and cannot be self-hosted. Body weight is 500, carried over from the
-  university's own typography.
-
-Full reasoning in [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md).
-
-## Changing the theme
-
-Please don't, casually. The point of a template is that the same decisions are
-not remade in every repository, and `newuu.css` encodes choices made against
-measured contrast ratios rather than taste.
-
-If you hit a genuine gap, open an issue **against this repository** so the fix
-reaches every site, instead of patching one repository's stylesheet.
+| `CONTRIBUTING.md` | How to propose changes |
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md). Do not change the theme casually: if you find a gap in it, open an issue against the [documentation template](https://github.com/NewUU-engineering/newuu-docs-template) so the fix reaches every site.
 
 ## Licence
 
-Content is [CC BY 4.0](LICENSE). **The university logo and mark in
-`docs/assets/` are not covered by that licence** and remain the property of New
-Uzbekistan University.
+Content is CC BY 4.0. The university logo and mark in `docs/assets/` are not covered by that licence and remain the property of New Uzbekistan University.
