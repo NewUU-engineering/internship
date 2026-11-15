@@ -14,11 +14,11 @@
 # =============================================================================
 
 # --- CHANGE THESE ------------------------------------------------------------
-site_name: NewUU Documentation Template
-site_description: The documentation template of the School of Engineering, New Uzbekistan University
-site_url: https://newuu-engineering.github.io/newuu-docs-template/
-repo_url: https://github.com/NewUU-engineering/newuu-docs-template
-repo_name: NewUU-engineering/newuu-docs-template
+site_name: NewUU Robotics Internship
+site_description: Tasks, schedule and deliverables of the robotics internship at the School of Engineering, New Uzbekistan University
+site_url: https://newuu-engineering.github.io/internship/
+repo_url: https://github.com/NewUU-engineering/internship
+repo_name: NewUU-engineering/internship
 # -----------------------------------------------------------------------------
 
 edit_uri: edit/main/docs/
@@ -164,17 +164,8 @@ validation:
   anchors: warn
 
 nav:
+  - Home: index.md
   - Tasks:
+      - Schedule and deliverables: tasks/interns.md
       - Junior track: tasks/junior.md
       - Senior track: tasks/senior.md
-      - Tasks for interns: tasks/interns.md
-  - Home: index.md
-  - Using this template:
-      - guide/index.md
-      - Components: guide/components.md
-      - Writing style: guide/writing.md
-      - Translations: guide/translations.md
-  - Example section:
-      - example/index.md
-      - Example procedure: example/procedure.md
-      - Example reference: example/reference.md
