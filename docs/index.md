@@ -6,77 +6,61 @@ hide:
 <div class="nu-hero" markdown>
 <div class="nu-hero__rule"></div>
 
-# NewUU Documentation Template
+# Robotics Internship
 
 <p class="nu-hero__lead" markdown>
-The documentation template of the **School of Engineering, New Uzbekistan
-University**. Clone it, replace the content, and the design is already done —
-colours, typography, components and accessibility are decided and written down.
+Tasks, schedule and deliverables of the robotics internship at the **School of
+Engineering, New Uzbekistan University**. You work with the Unitree G1 humanoid
+and the Go2 quadruped, from simulation and policy training to supervised tests
+on real hardware.
 </p>
 
-[Start here](guide/index.md){ .md-button .md-button--primary }
-[See every component](guide/components.md){ .md-button }
+[Schedule and deliverables](tasks/interns.md){ .md-button .md-button--primary }
+[Junior track](tasks/junior.md){ .md-button }
+[Senior track](tasks/senior.md){ .md-button }
 
 </div>
 
-## What you get
+## Where to start
 
 <div class="grid cards" markdown>
 
--   :material-palette-outline: **A decided visual system**
+-   :material-calendar-check-outline: **Schedule and deliverables**
 
     ---
 
-    NewUU navy and green, a navy-tinted neutral ramp, and a light and a dark
-    scheme that were designed separately rather than one being a filter of the
-    other. Every choice is recorded in [DESIGN-DECISIONS.md][dd].
+    The four-week plan: every work package with its level, week and the
+    deliverable you hand in.
 
--   :material-view-grid-outline: **A component vocabulary**
+    [Open the schedule](tasks/interns.md)
 
-    ---
-
-    Tables, a three-step admonition ladder, keyboard keys, step sequences, card
-    grids, tabs, code blocks and status pills — each with copy-paste source on
-    the [Components](guide/components.md) page.
-
--   :material-translate: **Three languages**
+-   :material-robot-outline: **Junior track**
 
     ---
 
-    English, Russian and Uzbek through `mkdocs-static-i18n`, with fallback to
-    English for pages that are not translated yet.
+    Task 1. Turn a human motion into a Unitree G1 motion played in MuJoCo, then
+    make the pretrained walking policy walk in a circle.
 
--   :material-wheelchair-accessibility: **Accessible by construction**
+    [Open Task 1](tasks/junior.md)
+
+-   :material-brain: **Senior track**
 
     ---
 
-    Every colour that carries text meets WCAG AA against its own background, and
-    severity is never signalled by colour alone.
+    Task 2. Train a Go2 locomotion policy in Isaac Lab, widen the command range
+    and investigate what the change does.
+
+    [Open Task 2](tasks/senior.md)
 
 </div>
 
-## Start a new documentation repository
+## How work is handed in
 
-<div class="steps" markdown>
+1. Do the task in a **public GitHub repository** of your own.
+2. Push everything the task lists: videos, checkpoints, scripts and a short
+   README or report.
+3. Submit the link to your repository through the Google Form given in the task.
 
-1.  **Use this repository as a template.** On GitHub, press *Use this template*
-    → *Create a new repository*, inside the `NewUU-engineering` organisation.
+Each task states its own deadline and what a complete submission contains.
 
-2.  **Change the five values** under `CHANGE THESE` at the top of `mkdocs.yml`:
-    `site_name`, `site_description`, `site_url`, `repo_url`, `repo_name`.
-
-3.  **Replace the content.** Delete `docs/guide/` and `docs/example/`, write your
-    own pages, and rewrite `nav`.
-
-4.  **Push to `main`.** The `Deploy docs` workflow publishes to GitHub Pages by
-    itself. Enable Pages once, from the `gh-pages` branch.
-
-</div>
-
-!!! note "The template keeps the design decisions, not your content"
-
-    `docs/guide/` and `docs/example/` exist to show what is available. Once your
-    own documentation is written, delete them — the theme does not depend on
-    them.
-
-  [dd]: https://github.com/NewUU-engineering/newuu-docs-template/blob/main/DESIGN-DECISIONS.md
+--8<-- "safety-warning.md"
